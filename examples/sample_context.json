@@ -1,0 +1,16 @@
+{
+  "run_id": "8c9d1fb64d46473aab11f373fdabaadb",
+  "user_input": "Tell me about HubSpot",
+  "out_agent_list": {
+    "list": [
+      {
+        "agent_id": "companyresearch",
+        "name": "Company Research Agent"
+      },
+      {
+        "agent_id": "1a4g81x0bfsc5dpi",
+        "name": "Flux Image Generator"
+      }
+    ]
+  }
+} 
