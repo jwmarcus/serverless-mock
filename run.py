@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Agent.ai Serverless Mock Runner
 
@@ -6,7 +5,6 @@ A simple script to run Agent.ai serverless functions locally.
 """
 import os
 import sys
-import json
 from mock_server import run_function
 
 def print_usage():

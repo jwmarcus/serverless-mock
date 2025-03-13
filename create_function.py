@@ -8,7 +8,7 @@ import os
 import sys
 import json
 
-FUNCTION_TEMPLATE = '''#!/usr/bin/env python3
+FUNCTION_TEMPLATE = '''
 import json
 
 def execute(event, context):

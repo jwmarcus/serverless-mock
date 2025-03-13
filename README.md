@@ -32,6 +32,7 @@ python create_function.py your_function_name
 ```
 
 This will create:
+
 - `your_function_name.py` - A template function file
 - `your_function_name_context.json` - A template context file
 
@@ -69,6 +70,7 @@ python run.py my_function.py my_function_context.json
 ### Function Structure
 
 Your Agent.ai serverless function should have an `execute` function that takes two parameters:
+
 - `event`: Contains the request data, including the context in `event['body']`
 - `context`: Usually empty in Agent.ai functions
 
@@ -87,13 +89,13 @@ def execute(event, context):
                 agent_context = body_data['context']
         except:
             pass
-    
+
     # Access context variables
     run_id = agent_context.get('run_id', 'unknown')
     user_input = agent_context.get('user_input', '')
-    
+
     # Your function logic here
-    
+
     # Return response
     response = {
         "message": "Function executed successfully!",
@@ -102,7 +104,7 @@ def execute(event, context):
             "user_input": user_input
         }
     }
-    
+
     return {
         "statusCode": 200,
         "body": json.dumps(response)
@@ -145,7 +147,7 @@ agent_list = agent_context.get('out_agent_list', {}).get('list', [])
 
 ## Project Structure
 
-```
+```text
 agent-ai-serverless-mock/
 ├── mock_server.py         # The main mock server script
 ├── run.py                 # Simple runner script
@@ -159,6 +161,7 @@ agent-ai-serverless-mock/
 ## Development Workflow
 
 1. **Create a new function**:
+
    ```bash
    python create_function.py my_function
    ```
@@ -170,6 +173,7 @@ agent-ai-serverless-mock/
    Open `my_function_context.json` and add your test data
 
 4. **Test your function**:
+
    ```bash
    python run.py my_function.py my_function_context.json
    ```
@@ -183,4 +187,4 @@ Once you've tested your function locally, you can copy the function code directl
 
 1. Include all necessary imports at the top
 2. Keep the `execute(event, context)` function signature
-3. Remove any debugging code or print statements 
+3. Remove any debugging code or print statements
